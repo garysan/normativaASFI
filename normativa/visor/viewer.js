@@ -35,9 +35,9 @@ var PAGE_NUMBER_LOADING_INDICATOR = 'visiblePageIsLoading';
 var DISABLE_AUTO_FETCH_LOADING_BAR_TIMEOUT = 5000;
 
 function configure(PDFJS) {
-  PDFJS.imageResourcesPath = '/asfi/visor/images/';
-  PDFJS.workerSrc = '/asfi/visor/pdf.worker.js';
-  PDFJS.cMapUrl = '/asfi/visor/cmaps/';
+  PDFJS.imageResourcesPath = 'visor/images/';
+  PDFJS.workerSrc = 'visor/pdf.worker.js';
+  PDFJS.cMapUrl = 'visor/cmaps/';
   PDFJS.cMapPacked = true;
 }
 
