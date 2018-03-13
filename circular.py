@@ -46,23 +46,25 @@ def uncompress(link):
 	arch=larch[-1]	
 	ucode= subprocess.call(["unzip","-o",arch,"-d","/home/"])
 
-
 local=circular_local()
-print local
+print "CIRCULAR LOCAL: "+ local
 
 online=circular_online()
-print online
+print "CIRCULAR ONLINE: "+ online
 
 if local==online:
-	print "No tengo circulares Nuevas"
+	print "No tengo circulares nuevas"
 
 else:
 	lfon1=local.split("_")
 	lfon=lfon1[1]
 	onfi1=online.split("_")
 	onfi=onfi1[1]
+	cirasfi="";
 	for circular in range(int(lfon)+1,int(onfi)+1):
-		cirasfi="ASFI_"+str(circular)
-		print "Obteniendo... "+cirasfi
-		get_circular(cirasfi)
-		uncompress (link_asfi)
+		cirasfi += "ASFI_"+str(circular);
+		cirasfi += ",";
+	param = cirasfi.rstrip(',')
+	print "Obteniendo:"+param
+	get_circular(param)
+	uncompress (link_asfi)
