@@ -1,0 +1,11 @@
+body  {
+	text-align:center;
+	font:12px Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+#wrap {
+	width:600px;
+	margin:0 auto;
+	padding:5px;
+	text-align:left;
+	}
