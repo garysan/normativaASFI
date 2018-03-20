@@ -33,13 +33,13 @@ def circular_online():
 	return circular[-1]
 
 def circular_local():
-	command = "ls -a /var/www/html/asfi/Circulares/ASFI_*"
+	command = "ls -a /var/www/html/asfi/normativa/Circulares/ASFI_*"
 	process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 	output, error = process.communicate()
 	archivos = output.split("\n")
 	lastfile = archivos[-2].split(".pdf")
 	localfile= lastfile[0].split("/")
-	return localfile[6]
+	return localfile[7]
 
 def uncompress(link):
 	larch=link.split("/")
