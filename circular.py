@@ -45,6 +45,7 @@ def uncompress(link):
 	larch=link.split("/")
 	arch=larch[-1]	
 	ucode= subprocess.call(["unzip","-o",arch,"-d","/home/"])
+	ucode= subprocess.call(["rm",arch]) #Borrar Archivo .exe
 
 local=circular_local()
 print "CIRCULAR LOCAL: "+ local
