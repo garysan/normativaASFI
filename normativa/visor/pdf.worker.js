@@ -40592,6 +40592,14 @@ var LinkAnnotation = (function LinkAnnotationClosure() {
 		if (url.charAt(0)==="T" && url.charAt(3)==="/" && url.charAt(7)==="."){
 			url=url.replace(url.substring(0,0),"Manual/");			
 		}
+		//Para Esquemas
+		//Manual/Esquema/E01.pdf
+		//Esquemas/E01.pdf
+		//012345678901234
+		if (url.charAt(0)==="E" && url.charAt(8)==="/" && url.charAt(9)==="E"){
+			url=url.replace(url.substring(0,0),"Manual/");			
+		}
+		
 		/*Para leyes*/
 		if(strLeyes.indexOf(url) > -1){
 				url=url.replace(url.substring(0,0),"Leyes/");			
