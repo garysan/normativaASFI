@@ -1,9 +1,12 @@
-[07-Jul-2018 23:52:11 America/La_Paz] PHP Warning:  mkdir(): File exists in C:\inetpub\wwwroot\asfi\circular.php on line 76
-[07-Jul-2018 23:52:11 America/La_Paz] PHP Warning:  mkdir(): File exists in C:\inetpub\wwwroot\asfi\circular.php on line 76
-[07-Jul-2018 23:52:12 America/La_Paz] PHP Warning:  mkdir(): File exists in C:\inetpub\wwwroot\asfi\circular.php on line 76
-[07-Jul-2018 23:52:12 America/La_Paz] PHP Warning:  mkdir(): File exists in C:\inetpub\wwwroot\asfi\circular.php on line 76
-[07-Jul-2018 23:52:12 America/La_Paz] PHP Warning:  mkdir(): File exists in C:\inetpub\wwwroot\asfi\circular.php on line 76
-[07-Jul-2018 23:52:12 America/La_Paz] PHP Warning:  mkdir(): File exists in C:\inetpub\wwwroot\asfi\circular.php on line 76
-[07-Jul-2018 23:52:12 America/La_Paz] PHP Warning:  mkdir(): File exists in C:\inetpub\wwwroot\asfi\circular.php on line 76
-[07-Jul-2018 23:52:12 America/La_Paz] PHP Warning:  mkdir(): File exists in C:\inetpub\wwwroot\asfi\circular.php on line 76
-[07-Jul-2018 23:52:12 America/La_Paz] PHP Warning:  mkdir(): File exists in C:\inetpub\wwwroot\asfi\circular.php on line 76
+[10-Jul-2018 20:17:08 America/La_Paz] PHP Warning:  file_get_contents(http://servdmzw.asfi.gob.bo/GeneraActualizacionCirculares/Paginas/Actualizaciones.aspx):  in C:\inetpub\wwwroot\asfi\circular.php on line 47
+[10-Jul-2018 20:17:08 America/La_Paz] PHP Notice:  Undefined offset: 1 in C:\inetpub\wwwroot\asfi\circular.php on line 17
+[10-Jul-2018 20:17:29 America/La_Paz] PHP Warning:  file_get_contents(http://servdmzw.asfi.gob.bo/GeneraActualizacionCirculares/Paginas/archivo.aspx?Numeros=):  in C:\inetpub\wwwroot\asfi\circular.php on line 31
+[10-Jul-2018 20:17:29 America/La_Paz] PHP Notice:  Undefined offset: 1 in C:\inetpub\wwwroot\asfi\circular.php on line 33
+[10-Jul-2018 20:17:30 America/La_Paz] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'RecursiveDirectoryIterator::__construct(reconorm,reconorm): El sistema no puede encontrar el archivo especificado. (code: 2)' in C:\inetpub\wwwroot\asfi\circular.php:72
+Stack trace:
+#0 C:\inetpub\wwwroot\asfi\circular.php(72): RecursiveDirectoryIterator->__construct('reconorm', 4096)
+#1 C:\inetpub\wwwroot\asfi\circular.php(24): uncompress()
+#2 {main}
+  thrown in C:\inetpub\wwwroot\asfi\circular.php on line 72
+[11-Jul-2018 00:26:11 America/La_Paz] PHP Warning:  mkdir(): File exists in C:\inetpub\wwwroot\asfi\circular.php on line 76
+[11-Jul-2018 00:26:11 America/La_Paz] PHP Warning:  mkdir(): File exists in C:\inetpub\wwwroot\asfi\circular.php on line 76
