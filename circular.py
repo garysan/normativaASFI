@@ -2,10 +2,13 @@
 # Script  : circular.py
 # Autor   : Ing. Gary Sandi Vigabriel
 # Objetivo: Obtencion de circulares de la ASFI
+# v1.0.1  : Mejora despues de descomprimir
 #################################################
 
 import mechanize
 import subprocess
+import shutil
+import os 
 
 link_asfi="TEMPO"
 
@@ -44,8 +47,15 @@ def circular_local():
 def uncompress(link):
 	larch=link.split("/")
 	arch=larch[-1]	
-	ucode= subprocess.call(["unzip","-o",arch,"-d","/home/"])
+	ucode= subprocess.call(["unzip","-o",arch,"-d","."])
 	ucode= subprocess.call(["rm",arch]) #Borrar Archivo .exe
+
+def movefiles():
+	dir = os.getcwd()
+	origen = dir+"/reconorm"
+	destino = dir+"/normativa/"
+ 	os.system("cp -r "+origen+"/* "+destino)
+ 	os.system("rm -rf "+origen)
 
 local=circular_local()
 print "CIRCULAR LOCAL: "+ local
@@ -69,3 +79,4 @@ else:
 	print "Obteniendo:"+param
 	get_circular(param)
 	uncompress (link_asfi)
+	movefiles()
