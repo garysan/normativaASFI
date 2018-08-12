@@ -11,16 +11,14 @@ Este es un script escrito en Python para obtener la normativa de la ASFI y poder
 - git
 
 ## Modo de uso
-- Crear la estructura 
-	mkdir /home/reconorm/
-	chmod 760 /home/reconorm/
-	mkdir /home/scripts/
-	cd /home/scripts/
-
 - Debe sincronizar el repositorio usando git:
 	git clone https://github.com/garysan/normativaOffline.git
 - Correr el script
-	python circular.py
+	python circular.py (en el caso de GNU/Linux)
+	php circular.php (en el caso de windows)
+
+## Version Online disponible en:
+https://garysan.github.io/normativaASFI/normativa/index.html
 
 ## Contacto 
 Enviame un correo a gary.gsv@gmail.com
