@@ -33,9 +33,12 @@ function get_circular($circulares){
 	$link = explode(">",$circulares[0])[1];
 	$ch = curl_init($link);
 	curl_setopt($ch, CURLOPT_HEADER, 1);
+	//curl_setopt($ch, CURLOPT_VERBOSE, 1); // debug
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);	
 	$raw_file_data = curl_exec($ch);
 	file_put_contents("update.zip", $raw_file_data);
 	echo "<br/>Proceso concluido!";	
