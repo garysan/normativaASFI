@@ -2677,7 +2677,10 @@ var AnnotationElement = (function AnnotationElementClosure() {
       var height = data.rect[3] - data.rect[1];
 
       container.setAttribute('data-annotation-id', data.id);
-
+      // para esquemas daba error
+      if (data.url.charAt(0)!=="?"){
+        data.url=data.url.replace(data.url.substring(0,0),"Manual/")
+      }
       // Do *not* modify `data.rect`, since that will corrupt the annotation
       // position on subsequent calls to `_createContainer` (see issue 6804).
       var rect = Util.normalizeRect([
